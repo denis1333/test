@@ -1,0 +1,32 @@
+.addbtn{
+	margin: auto;
+    display: block !important;
+    width: 35%;
+    font-size: 30px !important;
+    margin-top: 10px;
+}
+
+.editbtnfinal{
+	margin: auto;
+    display: block !important;
+    width: 25%;
+    font-size: 30px !important;
+    margin-top: 10px;
+}
+
+.tegTitle{
+	text-align: center;
+}
+
+.newTeg{
+	text-align: center;
+}
+
+.tags select{
+	float: right;
+}
+
+.myremove{
+	font-size: 16px;
+	cursor: pointer;
+}
