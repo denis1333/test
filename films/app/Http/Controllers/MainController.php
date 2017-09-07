@@ -12,7 +12,7 @@ class MainController extends Controller
 {
   public function showmainpage() // функция обрабатывающая гет запрос на главную страницу тут берется информация из бд: список фильмов, список тегов и сязанные с фильмами теги и передается во view
   {                     
-    $films = Film::all();      
+    $films = Film::orderBy('title')->get();     
     $filmsAndTags = [];
     foreach ($films as $film) {
       array_push($filmsAndTags, ['film_id'=>$film->id, 'film_title' => $film->title, 'film_year' => $film->year, 'film_tags' => Film::find($film->id)->tags()->get()]);
@@ -44,7 +44,6 @@ class MainController extends Controller
     $tags = $request->input('outTag');
     foreach ($tags as $key => $value) {
       $tag = Tag::where('title', $value)->get();
-      return $tags;
       $tagtofilm = new TagtoFilm;
       $tagtofilm->film_id = $film[0]->id;
       $tagtofilm->tag_id = $tag[0]->id;

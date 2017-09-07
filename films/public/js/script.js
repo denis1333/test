@@ -30,8 +30,7 @@ var tagsarray = [];
 			$('.selectedTeg').last().remove();
 		}
 		$.post('/add',{outTitle: title, outYear: year, outTag: tagsarray}).done(function(data,status){
-			console.log(data);
-			//$('#myform').submit();
+			$('#myform').submit();
 		});
 
 	});
