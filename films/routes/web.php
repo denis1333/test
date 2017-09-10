@@ -11,11 +11,11 @@
 |
 */
 
-Route::get('/','MainController@showmainpage')->name('home');
-Route::get('/add','MainController@showAddPage');
-Route::get('editfilm/{filmId}','MainController@editFilmPage');
-Route::post('editfilm/','MainController@editFilmPageSave');
-Route::post('/add','MainController@addFilm');
-Route::post('/addTag','MainController@addTag');
-Route::post('/delFilm','MainController@delFilm');
-Route::post('/delTagGlobal','MainController@delTagGlobal');
+Route::get('/','HomeController@showMainpage');
+Route::post('/delFilm','HomeController@delFilm');
+Route::post('/delTagGlobal','HomeController@delTagGlobal');
+Route::get('editfilm/{filmId}','EditFilmController@editFilmPage');
+Route::post('editfilm/','EditFilmController@editFilmPageSave');
+Route::post('/add','AddFilmAndTagController@addFilm');
+Route::post('/addTag','AddFilmAndTagController@addTag');
+Route::get('/add','AddFilmAndTagController@showAddPage');

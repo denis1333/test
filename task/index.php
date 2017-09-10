@@ -44,7 +44,6 @@ for ($i = 0 ; $i < count($mtrarray) ; $i++)
 		array_push($sum, $mtrarray[$i][$j][0] + $mtrarray[$i][$j][1] + $mtrarray[$i][$j][2]);
 	}
 }
-
 $unicsum = array_unique($sum);
 $strUnicSum = implode(',', $unicsum);
 print_r($strUnicSum);
